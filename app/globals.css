@@ -1,0 +1,406 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-Black.ttf') format('truetype');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-BlackItalic.ttf') format('truetype');
+  font-weight: 900;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-BoldItalic.ttf') format('truetype');
+  font-weight: 700;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-ExtraBold.ttf') format('truetype');
+  font-weight: 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-ExtraBoldItalic.ttf') format('truetype');
+  font-weight: 800;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-Heavy.ttf') format('truetype');
+  font-weight: 950;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-HeavyItalic.ttf') format('truetype');
+  font-weight: 950;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-Light.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-LightItalic.ttf') format('truetype');
+  font-weight: 300;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-MediumItalic.ttf') format('truetype');
+  font-weight: 500;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-RegularItalic.ttf') format('truetype');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-SemiBold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-Thin.ttf') format('truetype');
+  font-weight: 100;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-ThinItalic.ttf') format('truetype');
+  font-weight: 100;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-UltraLight.ttf') format('truetype');
+  font-weight: 200;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gilroy';
+  src: url('/fonts/gilroy/Gilroy-UltraLightItalic.ttf') format('truetype');
+  font-weight: 200;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Mariuz';
+  src: url('/fonts/mazius-display/MAZIUSREVIEW20.09-Regular.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Mariuz';
+  src: url('/fonts/mazius-display/MAZIUSREVIEW20.09-Italic.woff') format('woff');
+  font-weight: 400;
+  font-style: italic;
+}
+@font-face {
+  font-family: 'Mariuz';
+  src: url('/fonts/mazius-display/MAZIUSREVIEW20.09-Extraitalic.woff') format('woff');
+  font-weight: 700;
+  font-style: italic;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background: #fcfbf9;
+  }
+  body {
+    @apply bg-[#fcfbf9] text-[#2d2d2d];
+    font-family: 'Gilroy';
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold;
+    font-family: 'Gilroy';
+    letter-spacing: -0.02em;
+  }
+  p, span, div, a, button, input, textarea, label {
+    font-family: 'Gilroy';
+  }
+}
+
+@layer components {
+  .hero-main {
+    @apply text-[clamp(2.5rem,10vw,8rem)] font-bold leading-[1.05] tracking-tight;
+    font-family: 'Gilroy';
+  }
+  .hero-accent {
+    @apply text-[clamp(2.5rem,8vw,6rem)] italic text-[#2ee6a6] block font-bold;
+    font-family: 'Mariuz';
+    letter-spacing: 0.01em;
+  }
+  .nav-link {
+    @apply uppercase tracking-widest text-sm font-semibold text-[#2d2d2d] hover:underline underline-offset-8 transition-all duration-200;
+    font-family: 'Gilroy';
+  }
+  .nav-link-active {
+    @apply underline underline-offset-8;
+  }
+  .site-badge {
+    @apply absolute left-0 top-1/2 -translate-y-1/2 bg-white px-4 py-2 rounded-r-xl shadow text-black font-bold text-lg flex flex-col items-center;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    letter-spacing: 0.1em;
+    font-family: 'Gilroy';
+  }
+  .card-img {
+    @apply rounded-3xl shadow-2xl border-0;
+  }
+  .section-padding {
+    @apply pt-24 px-4;
+  }
+  .container-custom {
+    @apply max-w-7xl mx-auto;
+  }
+  .card {
+    @apply bg-white rounded-3xl shadow-lg;
+  }
+    .btn-primary {
+    @apply px-8 py-4 bg-mint text-white rounded-full font-bold text-lg shadow hover:bg-[#1fd6a6] transition-all;
+  }
+}
+
+/* Typing animation cursor */
+.typing-cursor {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  0%, 50% { opacity: 1; }
+  51%, 100% { opacity: 0; }
+}
+
+.text-mint, .text-\[\#2ee6a6\] {
+  font-family: 'Mariuz' !important;
+}
+
+.font-accent {
+  font-family: 'Mariuz';
+}
+
+/* Hide scrollbar utility */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+.scrollbar-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+/* Optionally, hide scrollbars globally */
+html, body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+html::-webkit-scrollbar, body::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #f3f3f3;
+}
+::-webkit-scrollbar-thumb {
+  background: #e0e0e0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bdbdbd;
+} 
+
+html, body {
+  overflow-x: hidden !important;
+}
+
+html, body, #__next, main {
+  overflow-x: hidden !important;
+  overflow-y: visible !important;
+  height: auto !important;
+}
+
+@media (max-width: 400px) {
+  html, body {
+    overflow-x: hidden !important;
+    background: rgb(21,21,21) !important;
+  }
+  .bg-offwhite, .bg-white {
+    background: transparent !important;
+  }
+  .hero-intro-mobile {
+    margin-left: 0 !important;
+    margin-top: 0 !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+    font-size: 1.25rem !important;
+    color: #fff !important;
+  }
+  ul.mb-6.text-\[\#2d2d2d\] {
+    color: #fff !important;
+  }
+  .hero-mobile-padding {
+    padding-top: 3rem !important; /* pt-12 */
+  }
+  h1, h2, h3, h4, h5, h6, p, span, div, a, label, .nav-link {
+    color: #fff !important;
+  }
+  .card, .card-img {
+    background: #232323 !important;
+    color: #fff !important;
+  }
+  .btn-primary {
+    background: #2ee6a6 !important;
+    color: #111 !important;
+  }
+  .text-mint, .text-\[\#2ee6a6\], .font-accent {
+    color: #2ee6a6 !important;
+  }
+  .hero-portrait-card-1 {
+    left: 12rem !important;
+    bottom: -15rem !important;
+  }
+  .hero-portrait-card-2 {
+    left: 15rem !important;
+    bottom: -30rem !important;
+  }
+  .hero-portrait-card-3 {
+    left: 17rem !important;
+    bottom: -45rem !important;
+  }
+} 
+
+@media (max-width: 700px) and (min-width: 401px) {
+  html, body {
+    overflow-x: hidden !important;
+  }
+  .hero-portrait-card-1 {
+    left: 12rem !important;
+    bottom: -15rem !important;
+  }
+  .hero-portrait-card-2 {
+    left: 15rem !important;
+    bottom: -20rem !important;
+  }
+  .hero-portrait-card-3 {
+    left: 17rem !important;
+    bottom: -25rem !important;
+  }
+}
+
+.py-24 {
+  padding-bottom: 0 !important;
+} 
+
+@media (max-width: 767px) and (min-width: 701px) {
+  html, body {
+    overflow-x: hidden !important;
+  }
+
+  .hero-portrait-card-1 {
+    left: 12rem !important;
+    bottom: -15rem !important;
+  }
+  .hero-portrait-card-2 {
+    left: 15rem !important;
+    bottom: -20rem !important;
+  }
+  .hero-portrait-card-3 {
+    left: 17rem !important;
+    bottom: -25rem !important;
+  }
+}
+
+.py-24 {
+  padding-bottom: 0 !important;
+} 
+
+@media (max-width: 900px) and (min-width: 768px) {
+  html, body {
+    overflow-x: hidden !important;
+  }
+  .md\:w-\[440px\] {
+    width: 256px !important;
+    height: 333px !important;
+  }
+  .hero-portrait-card-1 {
+    left: 12rem !important;
+    bottom: -50rem !important;
+  }
+  .hero-portrait-card-2 {
+    left: 15rem !important;
+    bottom: -55rem !important;
+  }
+  .hero-portrait-card-3 {
+    left: 17rem !important;
+    bottom: -60rem !important;
+  }
+}
+
+.py-24 {
+  padding-bottom: 0 !important;
+} 
+
+@media (max-width: 1400px) and (min-width: 901px) {
+  html, body {
+    overflow-x: hidden !important;
+  }
+
+  .hero-portrait-card-1 {
+    left: 4rem !important;
+    bottom: -32rem !important;
+  }
+  .hero-portrait-card-2 {
+    left: 8rem !important;
+    bottom: -40rem !important;
+  }
+  .hero-portrait-card-3 {
+    left: 12rem !important;
+    bottom: -47rem !important;
+  }
+}
+
+.py-24 {
+  padding-bottom: 0 !important;
+} 
