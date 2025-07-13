@@ -97,7 +97,7 @@ export const personalDetails = {
       description: 'A responsive portfolio website built with modern web technologies and smooth animations.',
       image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop',
       technologies: ['React', 'Framer Motion', 'Tailwind CSS', 'Vercel'],
-      github: 'https://github.com/ramanikantjha/portfolio',
+      github: 'https://github.com/ramanikantjha/portfolio_v3',
       live: 'https://ramanikantjha.me',
       featured: false
     },
