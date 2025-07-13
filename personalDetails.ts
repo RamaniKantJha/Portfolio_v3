@@ -14,8 +14,8 @@ export const personalDetails = {
   education: [
     {
       degree: 'B.Tech in Computer Science and Engineering',
-      institution: 'Delhi Technological University',
-      period: '2016 - 2020',
+      institution: 'Delhi Technical Campus',
+      period: '2019 - 2023',
       location: 'New Delhi, India',
       details: 'Graduated with distinction. Specialized in software engineering and web technologies.'
     }
