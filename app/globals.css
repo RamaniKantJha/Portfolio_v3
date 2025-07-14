@@ -261,6 +261,12 @@ html, body, #__next, main {
   height: auto !important;
 }
 
+.hero-portrait-card {
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, box-shadow, opacity;
+  /* Default transform can be set here if needed, e.g. scale(1) */
+}
+
 @media (max-width: 400px) {
   html, body {
     overflow-x: hidden !important;
@@ -404,3 +410,4 @@ html, body, #__next, main {
 .py-24 {
   padding-bottom: 0 !important;
 } 
+ 
