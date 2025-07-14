@@ -92,9 +92,9 @@ const Hero = ({ startTyping = false }: HeroProps) => {
         </div>
       </section>
       {/* Hero intro section with text and cards */}
-      <section className="section-hero-intro relative w-full flex flex-col md:flex-row items-center justify-between px-4 py-24 bg-offwhite">
+      <section className="section-hero-intro relative w-full flex flex-col md:flex-row items-start justify-between px-4 py-24 bg-offwhite">
         {/* Introduction text */}
-        <div className="flex-1 max-w-xl z-10 mt-0 md:mt-[-40rem] lg:ml-24 hero-intro-mobile">
+        <div className="flex-1 max-w-2xl z-10 mt-0 md:mt-0 md:ml-16 lg:ml-32 xl:ml-40 hero-intro-mobile text-left">
           <h2 className="text-4xl md:text-5xl font-bold leading-tight text-[#2d2d2d] mb-6">
             I am {personalDetails.name.toUpperCase()},<br />
             building smart, scalable &<br />
@@ -104,8 +104,8 @@ const Hero = ({ startTyping = false }: HeroProps) => {
           </h2>
         </div>
         {/* Portrait cards container */}
-        <div className="flex-1 flex justify-center items-end relative min-h-[840px] max-w-2xl hero-cards-below">
-          <div className="relative w-[680px] h-[840px] md:w-[840px] md:h-[1040px]" style={{ transform: 'matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, -628, 0, 1)', opacity: 1, pointerEvents: 'all' }}>
+        <div className="flex-1 flex justify-center items-end relative min-h-[700px] max-w-2xl hero-cards-below">
+          <div className="relative w-[700px] h-[800px] md:w-[800px] md:h-[900px] lg:w-[900px] lg:h-[1000px] xl:w-[1000px] xl:h-[1100px]" style={{ opacity: 1, pointerEvents: 'all' }}>
             {heroImages.map((img, i) => {
               // Base rotation angles for each card
               const baseAngles = [-10.611, -4.3923, -1.0518];
@@ -115,6 +115,9 @@ const Hero = ({ startTyping = false }: HeroProps) => {
                 'translate3d(0px, -3.3413%, 0px)'
               ];
               const angle = baseAngles[i] + scrollAngle;
+              // Push cards further right and down for separation
+              const lefts = ["6rem", "14rem", "22rem"];
+              const bottoms = ["-8rem", "-16rem", "-24rem"];
               return (
                 <motion.img
                   key={img.src}
@@ -124,11 +127,11 @@ const Hero = ({ startTyping = false }: HeroProps) => {
                   animate={false}
                   transition={undefined}
                   viewport={undefined}
-                  className={`absolute card-img hero-portrait-card hero-portrait-card-${i + 1} w-[220px] h-[320px] md:w-[440px] md:h-[640px] lg:w-[440px] lg:h-[640px] object-cover group hover:shadow-xl transition-shadow duration-300 hover:scale-105 filter grayscale hover:grayscale-0 z-${(i+1)*10} transition-transform duration-[1200ms] ease-in-out`}
+                  className={`absolute card-img hero-portrait-card hero-portrait-card-${i + 1} w-[220px] h-[320px] md:w-[380px] md:h-[540px] lg:w-[400px] lg:h-[600px] object-cover group hover:shadow-xl transition-shadow duration-300 hover:scale-105 filter grayscale hover:grayscale-0 z-${(i+1)*10} transition-transform duration-[1200ms] ease-in-out`}
                   style={{
                     transform: `${baseTransforms[i]} rotate(${angle}deg)`,
-                    left: ["-13rem", "-3rem", "6rem"][i],
-                    bottom: ["-10rem", "-15rem", "-22rem"][i],
+                    left: lefts[i],
+                    bottom: bottoms[i],
                   }}
                   whileHover={{ scale: 1.05, boxShadow: '0 16px 48px 0 rgba(60,60,60,0.28)' }}
                 />

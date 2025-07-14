@@ -304,16 +304,16 @@ html, body, #__next, main {
     color: #2ee6a6 !important;
   }
   .hero-portrait-card-1 {
-    left: 12rem !important;
-    bottom: -15rem !important;
+    left: 3rem !important;
+    bottom: 25rem !important;
   }
   .hero-portrait-card-2 {
-    left: 15rem !important;
-    bottom: -30rem !important;
+    left: 5rem !important;
+    bottom: 13rem !important;
   }
   .hero-portrait-card-3 {
-    left: 17rem !important;
-    bottom: -45rem !important;
+    left: 7rem !important;
+    bottom: 0rem !important;
   }
 } 
 
@@ -362,7 +362,7 @@ html, body, #__next, main {
   padding-bottom: 0 !important;
 } 
 
-@media (max-width: 900px) and (min-width: 768px) {
+@media (max-width: 1300px) and (min-width: 900px) {
   html, body {
     overflow-x: hidden !important;
   }
@@ -370,17 +370,21 @@ html, body, #__next, main {
     width: 256px !important;
     height: 333px !important;
   }
+  .hero-portrait-card {
+    width: 300px !important;
+    height: 460px !important;
+  }
   .hero-portrait-card-1 {
-    left: 12rem !important;
-    bottom: -50rem !important;
+    left: 6rem !important;
+    bottom: 42rem !important;
   }
   .hero-portrait-card-2 {
-    left: 15rem !important;
-    bottom: -55rem !important;
+    left: 10rem !important;
+    bottom: 25rem !important;
   }
   .hero-portrait-card-3 {
-    left: 17rem !important;
-    bottom: -60rem !important;
+    left: 14rem !important;
+    bottom: 5rem !important;
   }
 }
 
@@ -388,22 +392,21 @@ html, body, #__next, main {
   padding-bottom: 0 !important;
 } 
 
-@media (max-width: 1400px) and (min-width: 901px) {
-  html, body {
-    overflow-x: hidden !important;
-  }
-
+@media (min-width: 1301px) {
   .hero-portrait-card-1 {
-    left: 6rem !important;
-    bottom: -22rem !important;
+    left: 0rem !important;
+    bottom: 35rem !important;
+    /* No transform/transition here */
   }
   .hero-portrait-card-2 {
-    left: 10rem !important;
-    bottom: -30rem !important;
+    left: 5rem !important;
+    bottom: 25rem !important;
+    /* No transform/transition here */
   }
   .hero-portrait-card-3 {
-    left: 14rem !important;
-    bottom: -40rem !important;
+    left: 10rem !important;
+    bottom: 15rem !important;
+    /* No transform/transition here */
   }
 }
 
