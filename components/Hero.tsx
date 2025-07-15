@@ -127,13 +127,16 @@ const Hero = ({ startTyping = false }: HeroProps) => {
                   animate={false}
                   transition={undefined}
                   viewport={undefined}
-                  className={`absolute card-img hero-portrait-card hero-portrait-card-${i + 1} w-[220px] h-[320px] md:w-[380px] md:h-[540px] lg:w-[400px] lg:h-[600px] object-cover group hover:shadow-xl transition-shadow duration-300 hover:scale-105 filter grayscale hover:grayscale-0 z-${(i+1)*10} transition-transform duration-[1200ms] ease-in-out`}
+                  className={`absolute card-img hero-portrait-card hero-portrait-card-${i + 1} w-[220px] h-[320px] md:w-[380px] md:h-[540px] lg:w-[400px] lg:h-[600px] object-cover group hover:shadow-xl transition-shadow duration-300 filter grayscale hover:grayscale-0 z-${(i+1)*10} transition-transform duration-[1200ms] ease-in-out`}
                   style={{
                     transform: `${baseTransforms[i]} rotate(${angle}deg)`,
                     left: lefts[i],
                     bottom: bottoms[i],
                   }}
-                  whileHover={{ scale: 1.05, boxShadow: '0 16px 48px 0 rgba(60,60,60,0.28)' }}
+                  whileHover={{
+                    boxShadow: '0 16px 48px 0 rgba(60,60,60,0.28)',
+                    transform: `${baseTransforms[i]} rotate(${angle}deg) scale(1.05)`
+                  }}
                 />
               );
             })}
