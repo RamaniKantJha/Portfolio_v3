@@ -54,10 +54,10 @@ const Hero = ({ startTyping = false }: HeroProps) => {
   return (
     <>
       {/* Main hero section with title */}
-      <section id="home" ref={heroRef} className="section-hero relative min-h-screen flex flex-col justify-center items-center px-4 bg-offwhite">
+      <section id="home" ref={heroRef} className="section-hero relative min-h-screen flex flex-col justify-center items-center px-4 bg-offwhite dark:bg-[#151515]">
         <div className="w-full flex flex-col items-center justify-center pt-24 pb-12 hero-mobile-padding">
           <div className="w-full flex flex-col items-center justify-center">
-            <h1 className="hero-main text-center">
+            <h1 className="hero-main text-center text-[#2d2d2d] dark:text-white">
               {startTyping ? (
                 <TypingAnimation 
                   text={personalDetails.designation}
@@ -79,23 +79,23 @@ const Hero = ({ startTyping = false }: HeroProps) => {
               )}
             </h1>
             <div className="flex flex-row justify-center gap-12 mt-8 w-full max-w-5xl">
-              <div className="flex flex-col items-start gap-2 text-gray-400 text-xs font-semibold uppercase">
-                <span className="">Currently Available <span className="italic">for</span></span>
-                <span>Freelance Worldwide</span>
+              <div className="flex flex-col items-start gap-2 text-gray-400 dark:text-gray-200 text-xs font-semibold uppercase">
+                <span className="text-gray-400 dark:text-gray-200 text-xs font-semibold uppercase">Currently Available <span className="italic text-[#2d2d2d] dark:text-white">for</span></span>
+                <span className="text-gray-400 dark:text-gray-200 text-xs font-semibold uppercase">Freelance Worldwide</span>
               </div>
-              <div className="flex flex-col items-end gap-2 text-gray-400 text-xs font-semibold uppercase">
-                <span>My Local Time 16:38</span>
-                <span>GMT (+5:30)</span>
+              <div className="flex flex-col items-end gap-2 text-gray-400 dark:text-gray-200 text-xs font-semibold uppercase">
+                <span className="text-gray-400 dark:text-gray-200 text-xs font-semibold uppercase">My Local Time 16:38</span>
+                <span className="text-gray-400 dark:text-gray-200 text-xs font-semibold uppercase">GMT (+5:30)</span>
               </div>
             </div>
           </div>
         </div>
       </section>
       {/* Hero intro section with text and cards */}
-      <section className="section-hero-intro relative w-full flex flex-col md:flex-row items-start justify-between px-4 py-24 bg-offwhite">
+      <section className="section-hero-intro relative w-full flex flex-col md:flex-row items-start justify-between px-4 py-24 bg-offwhite dark:bg-[#151515]">
         {/* Introduction text */}
         <div className="flex-1 max-w-2xl z-10 mt-0 md:mt-0 md:ml-16 lg:ml-32 xl:ml-40 hero-intro-mobile text-left">
-          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-[#2d2d2d] mb-6">
+          <h2 className="text-4xl md:text-5xl font-bold leading-tight text-[#2d2d2d] dark:text-white mb-6">
             I am {personalDetails.name.toUpperCase()},<br />
             building smart, scalable &<br />
             <span className="text-mint font-accent italic">visually engaging</span> solutions—<br />

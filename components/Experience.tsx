@@ -9,7 +9,7 @@ const Experience = () => {
   const education = personalDetails.education[0];
 
   return (
-    <section id="experience" className="section-experience section-padding bg-offwhite">
+    <section id="experience" className="section-experience section-padding bg-offwhite dark:bg-[#151515]">
       <div className="container-custom">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -18,10 +18,10 @@ const Experience = () => {
           viewport={{ once: true }}
           className="text-center mb-16"
         >
-          <h2 className="text-4xl font-bold mb-4 text-[#2d2d2d]">
+          <h2 className="text-4xl font-bold mb-4 text-[#2d2d2d] dark:text-white">
             Work <span className="text-mint font-accent italic">Experience</span>
           </h2>
-          <p className="text-lg text-[#2d2d2d] max-w-2xl mx-auto">
+          <p className="text-lg text-[#2d2d2d] dark:text-white max-w-2xl mx-auto">
             My professional journey in software development
           </p>
         </motion.div>
@@ -51,20 +51,20 @@ const Experience = () => {
 
                 {/* Content */}
                 <div className="flex-1">
-                  <div className="card p-6 hover:shadow-xl transition-shadow duration-300">
+                  <div className="card p-6 hover:shadow-xl transition-shadow duration-300 bg-white dark:bg-[#232323]">
                     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-4">
                       <div>
-                        <h3 className="text-xl font-bold text-[#2d2d2d] mb-1">
+                        <h3 className="text-xl font-bold text-[#2d2d2d] dark:text-white mb-1">
                           {experience.title}
                         </h3>
-                        <div className="flex items-center space-x-4 text-sm text-[#2d2d2d]">
+                        <div className="flex items-center space-x-4 text-sm text-[#2d2d2d] dark:text-white">
                           <div className="flex items-center space-x-1">
                             <Calendar size={14} />
-                            <span>{experience.period}</span>
+                            <span className="text-[#2d2d2d] dark:text-white">{experience.period}</span>
                           </div>
                           <div className="flex items-center space-x-1">
                             <MapPin size={14} />
-                            <span>{experience.location}</span>
+                            <span className="text-[#2d2d2d] dark:text-white">{experience.location}</span>
                           </div>
                         </div>
                       </div>
@@ -76,14 +76,13 @@ const Experience = () => {
                           href={experience.link}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="text-[#2d2d2d] hover:text-mint transition-colors duration-200"
                         >
                           <ExternalLink size={14} />
                         </a>
                       </div>
                     </div>
 
-                    <p className="text-[#2d2d2d] mb-4 leading-relaxed">
+                    <p className="text-[#2d2d2d] dark:text-white mb-4 leading-relaxed">
                       {experience.description}
                     </p>
 
@@ -113,30 +112,30 @@ const Experience = () => {
           className="mt-20"
         >
           <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4 text-[#2d2d2d]">
+            <h3 className="text-2xl font-bold text-[#2d2d2d] dark:text-white mb-4">
               <span className="text-mint font-accent">Education</span>
             </h3>
           </div>
 
           <div className="max-w-2xl mx-auto">
-            <div className="card p-8 text-center">
-              <h4 className="text-xl font-bold text-[#2d2d2d] mb-2">
+            <div className="card p-8 text-center bg-white dark:bg-[#232323]">
+              <h4 className="text-xl font-bold text-[#2d2d2d] dark:text-white mb-2">
                 {education.degree}
               </h4>
               <p className="text-lg text-mint font-accent mb-4">
                 {education.institution}
               </p>
-              <div className="flex items-center justify-center space-x-4 text-sm text-[#2d2d2d]">
+              <div className="flex items-center justify-center space-x-4 text-sm text-[#2d2d2d] dark:text-white">
                 <div className="flex items-center space-x-1">
                   <Calendar size={14} />
-                  <span>{education.period}</span>
+                  <span className="text-[#2d2d2d] dark:text-white">{education.period}</span>
                 </div>
                 <div className="flex items-center space-x-1">
                   <MapPin size={14} />
-                  <span>{education.location}</span>
+                  <span className="text-[#2d2d2d] dark:text-white">{education.location}</span>
                 </div>
               </div>
-              <p className="mt-4 text-[#2d2d2d]">
+              <p className="mt-4 text-[#2d2d2d] dark:text-white">
                 {education.details}
               </p>
             </div>

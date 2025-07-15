@@ -44,13 +44,13 @@ const skills = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="section-skills section-padding bg-offwhite">
+    <section id="skills" className="section-skills section-padding bg-offwhite dark:bg-[#151515]">
       <div className="container-custom">
         <div className="text-center mb-16">
-          <h2 className="text-4xl font-bold mb-4 text-[#2d2d2d]">
+          <h2 className="text-4xl font-bold mb-4 text-[#2d2d2d] dark:text-white">
             Skills & <span className="text-mint font-accent italic">Expertise</span>
           </h2>
-          <p className="text-lg text-[#2d2d2d] max-w-2xl mx-auto">
+          <p className="text-lg text-[#2d2d2d] dark:text-white max-w-2xl mx-auto">
             My technical stack and areas of expertise
           </p>
         </div>
@@ -62,24 +62,24 @@ const Skills = () => {
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
               viewport={{ once: true, margin: "-50px" }}
-              className="card p-6 bg-white rounded-3xl group hover:shadow-xl transition-shadow duration-300 hover:scale-105"
+              className="card p-6 bg-white dark:bg-[#232323] rounded-3xl group hover:shadow-xl transition-shadow duration-300 hover:scale-105"
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
             >
-              <h3 className="text-xl font-bold text-[#2d2d2d] mb-6 text-center">
+              <h3 className="text-xl font-bold text-[#2d2d2d] dark:text-white mb-6 text-center">
                 {cat.category}
               </h3>
               <div className="space-y-4">
                 {cat.items.map((skill) => (
                   <div key={skill.name}>
                     <div className="flex justify-between items-center mb-2">
-                      <span className="text-[#2d2d2d] font-medium">
+                      <span className="text-[#2d2d2d] dark:text-white font-medium">
                         {skill.name}
                       </span>
                       <span className="text-sm text-mint font-medium font-accent">
                         {skill.level}%
                       </span>
                     </div>
-                    <div className="w-full bg-gray-200 rounded-full h-2">
+                    <div className="w-full bg-gray-200 dark:bg-gray-700 rounded-full h-2">
                       <div
                         className="bg-gradient-to-r from-mint to-blue-400 h-2 rounded-full"
                         style={{ width: `${skill.level}%` }}

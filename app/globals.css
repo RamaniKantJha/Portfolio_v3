@@ -280,7 +280,6 @@ html, body, #__next, main {
 @media (max-width: 400px) {
   html, body {
     overflow-x: hidden !important;
-    background: rgb(21,21,21) !important;
   }
   .bg-offwhite, .bg-white {
     background: transparent !important;
@@ -298,9 +297,6 @@ html, body, #__next, main {
   }
   .hero-mobile-padding {
     padding-top: 3rem !important; /* pt-12 */
-  }
-  h1, h2, h3, h4, h5, h6, p, span, div, a, label, .nav-link {
-    color: #fff !important;
   }
   .card, .card-img {
     background: #232323 !important;

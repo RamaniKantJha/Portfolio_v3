@@ -21,10 +21,10 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="section-projects section-padding bg-offwhite">
+    <section id="projects" className="section-projects section-padding bg-offwhite dark:bg-[#151515]">
       <div className="container-custom">
         <div className="text-center mb-8">
-          <h3 className="text-2xl font-bold text-[#2d2d2d] mb-4">
+          <h3 className="text-2xl font-bold text-[#2d2d2d] dark:text-white mb-4">
             All Projects
           </h3>
         </div>
@@ -41,7 +41,7 @@ const Projects = () => {
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
                 viewport={{ once: true, margin: "-50px" }}
-                className="card min-w-[320px] max-w-[320px] flex-shrink-0 overflow-hidden group hover:shadow-xl transition-shadow duration-300 bg-white rounded-3xl"
+                className="card min-w-[320px] max-w-[320px] flex-shrink-0 overflow-hidden group hover:shadow-xl transition-shadow duration-300 bg-white dark:bg-[#232323] rounded-3xl"
                 whileHover={{ scale: 1.02, transition: { duration: 0.3 } }}
               >
                 <div className="relative overflow-hidden">
@@ -55,10 +55,10 @@ const Projects = () => {
                   </div>
                 </div>
                 <div className="p-4">
-                  <h4 className="text-lg font-bold text-[#2d2d2d] mb-2">
+                  <h4 className="text-lg font-bold text-[#2d2d2d] dark:text-white mb-2">
                     {project.title}
                   </h4>
-                  <p className="text-sm text-[#2d2d2d] mb-3 line-clamp-2">
+                  <p className="text-sm text-[#2d2d2d] dark:text-white mb-3 line-clamp-2">
                     {project.description}
                   </p>
                   <div className="flex flex-wrap gap-1 mb-3">

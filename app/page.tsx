@@ -47,7 +47,7 @@ export default function Home() {
 
   if (isLoading) {
     return (
-      <div className="fixed inset-0 w-full h-full flex items-center justify-center bg-offwhite z-50">
+      <div className="fixed inset-0 w-full h-full flex items-center justify-center bg-offwhite dark:bg-[#151515] z-50">
         <div className="text-center">
           <div className="animate-spin rounded-full h-16 w-16 border-b-2 border-mint mx-auto mb-8"></div>
           
@@ -56,7 +56,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: showName ? 1 : 0, y: showName ? 0 : 20 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
-            className="text-4xl md:text-5xl font-bold text-[#2d2d2d] mb-4"
+            className="text-4xl md:text-5xl font-bold text-[#2d2d2d] dark:text-white mb-4"
           >
             Ramani Kant <span className="text-mint font-accent">Jha</span>
           </motion.div>
@@ -66,7 +66,7 @@ export default function Home() {
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: showIsA ? 1 : 0, x: showIsA ? 0 : -50 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
-            className="text-4xl md:text-5xl font-bold text-[#2d2d2d] mb-4"
+            className="text-4xl md:text-5xl font-bold text-[#2d2d2d] dark:text-white mb-4"
           >
             is a
           </motion.div>
@@ -83,7 +83,7 @@ export default function Home() {
                 text="AI & Machine Learning Intern"
                 speed={150}
                 delay={1000}
-                className="text-4xl md:text-5xl font-bold text-[#2d2d2d]"
+                className="text-4xl md:text-5xl font-bold text-[#2d2d2d] dark:text-white"
                 isHero={true}
               />
             )}
