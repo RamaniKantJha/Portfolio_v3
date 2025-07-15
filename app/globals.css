@@ -267,6 +267,16 @@ html, body, #__next, main {
   /* Default transform can be set here if needed, e.g. scale(1) */
 }
 
+.hero-portrait-card-1 {
+  transform: rotate(-6deg);
+}
+.hero-portrait-card-2 {
+  transform: rotate(0deg);
+}
+.hero-portrait-card-3 {
+  transform: rotate(6deg);
+}
+
 @media (max-width: 400px) {
   html, body {
     overflow-x: hidden !important;
@@ -412,5 +422,19 @@ html, body, #__next, main {
 
 .py-24 {
   padding-bottom: 0 !important; 
+} 
+
+/* Circular background for footer and other sections */
+.footer-circle-bg {
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 150vw;
+  height: 80vw;
+  background: radial-gradient(ellipse at center, rgba(255,255,255,0.08) 60%, transparent 100%);
+  border-radius: 50% 50% 0 0 / 100% 100% 0 0;
+  z-index: 0;
+  pointer-events: none;
 } 
  

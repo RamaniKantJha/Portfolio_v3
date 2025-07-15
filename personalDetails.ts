@@ -95,7 +95,7 @@ export const personalDetails = {
     {
       title: 'Portfolio Website',
       description: 'A responsive portfolio website built with modern web technologies and smooth animations.',
-      image: 'https://images.unsplash.com/photo-1467232004584-a241de8bcf5d?w=600&h=400&fit=crop',
+      image: '/assets/Portfolio_image.png',
       technologies: ['React', 'Framer Motion', 'Tailwind CSS', 'Vercel'],
       github: 'https://github.com/ramanikantjha/portfolio_v3',
       live: 'https://ramanikantjha.me',
@@ -109,6 +109,24 @@ export const personalDetails = {
       github: 'https://github.com/ramanikantjha/api-gateway',
       live: 'https://api-gateway-demo.com',
       featured: false
+    },
+    {
+      title: 'AI ChatBot',
+      description:
+        'An intelligent chatbot built using NLP and React, capable of holding contextual conversations.',
+      image: '',
+      technologies: ['Python', 'FastAPI', 'React'],
+      github: '[link-to-code]',
+      live: '[link-to-demo]',
+    },
+    {
+      title: 'Ghibli Cartoonifier',
+      description:
+        'Converts real images into Ghibli-style art using AnimeGANv2 and a FastAPI backend.',
+      image: '',
+      technologies: ['PyTorch', 'FastAPI', 'React', 'AnimeGAN'],
+      github: '[link-to-code]',
+      live: '[link-to-demo]',
     }
   ],
 }; 

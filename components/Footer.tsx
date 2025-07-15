@@ -8,7 +8,9 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer id="footer" className="w-full bg-[#233532] text-white pt-20 pb-8 px-4">
+    <footer id="footer" className="w-full bg-[#233532] text-white pt-20 pb-8 px-4 relative overflow-hidden">
+      {/* Circular background */}
+      <div className="footer-circle-bg"></div>
       <div className="max-w-7xl mx-auto flex flex-col gap-16">
         {/* Heading */}
         <motion.div 
