@@ -57,76 +57,58 @@ export const personalDetails = {
   },
   projects: [
     {
-      title: 'E-Commerce Platform',
-      description: 'A full-stack e-commerce platform built with React, Node.js, and PostgreSQL. Features include user authentication, product management, payment integration, and admin dashboard.',
-      image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop',
-      technologies: ['React', 'Node.js', 'PostgreSQL', 'Stripe', 'AWS'],
-      github: 'https://github.com/ramanikantjha/ecommerce',
-      live: 'https://ecommerce-demo.com',
-      featured: true
-    },
-    {
-      title: 'Task Management App',
-      description: 'A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.',
-      image: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600&h=400&fit=crop',
-      technologies: ['React', 'TypeScript', 'Socket.io', 'MongoDB', 'Express'],
-      github: 'https://github.com/ramanikantjha/task-manager',
-      live: 'https://task-manager-demo.com',
-      featured: true
-    },
-    {
-      title: 'Weather Dashboard',
-      description: 'A weather application that provides real-time weather data, forecasts, and interactive maps using multiple weather APIs.',
-      image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=600&h=400&fit=crop',
-      technologies: ['Vue.js', 'OpenWeather API', 'Chart.js', 'Vite'],
-      github: 'https://github.com/ramanikantjha/weather-app',
-      live: 'https://weather-demo.com',
-      featured: false
-    },
-    {
-      title: 'Blog Platform',
-      description: 'A modern blog platform with markdown support, SEO optimization, and content management system.',
-      image: 'https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=400&fit=crop',
-      technologies: ['Next.js', 'MDX', 'Tailwind CSS', 'Vercel'],
-      github: 'https://github.com/ramanikantjha/blog-platform',
-      live: 'https://blog-demo.com',
-      featured: false
-    },
-    {
       title: 'Portfolio Website',
       description: 'A responsive portfolio website built with modern web technologies and smooth animations.',
       image: '/assets/Portfolio_image.png',
       technologies: ['React', 'Framer Motion', 'Tailwind CSS', 'Vercel'],
       github: 'https://github.com/ramanikantjha/portfolio_v3',
       live: 'https://ramanikantjha.me',
-      featured: false
-    },
-    {
-      title: 'API Gateway',
-      description: 'A microservices API gateway with authentication, rate limiting, and request routing capabilities.',
-      image: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop',
-      technologies: ['Node.js', 'Redis', 'Docker', 'Nginx', 'JWT'],
-      github: 'https://github.com/ramanikantjha/api-gateway',
-      live: 'https://api-gateway-demo.com',
-      featured: false
+      featured: true
     },
     {
       title: 'AI ChatBot',
-      description:
-        'An intelligent chatbot built using NLP and React, capable of holding contextual conversations.',
+      description: 'An intelligent chatbot built using NLP and React, capable of holding contextual conversations.',
       image: '',
       technologies: ['Python', 'FastAPI', 'React'],
       github: '[link-to-code]',
       live: '[link-to-demo]',
+      featured: true  
+    },
+    {
+      title: 'Image Enhancer',
+      description: 'Developed an advanced image enhancement tool leveraging deep learning techniques to improve image quality, resolution, and clarity. The tool supports denoising, super-resolution, and color correction, making it suitable for both professional and personal use.',
+      image: '',
+      technologies: ['Python', 'OpenCV', 'TensorFlow', 'Keras', 'NumPy'],
+      github: '[link-to-code]',
+      live: '[link-to-demo]',
+      featured: true
     },
     {
       title: 'Ghibli Cartoonifier',
-      description:
-        'Converts real images into Ghibli-style art using AnimeGANv2 and a FastAPI backend.',
+      description: 'Converts real images into Ghibli-style art using AnimeGANv2 and a FastAPI backend.',
       image: '',
       technologies: ['PyTorch', 'FastAPI', 'React', 'AnimeGAN'],
       github: '[link-to-code]',
       live: '[link-to-demo]',
-    }
+      featured: true
+    },
+    {
+      title: 'Heart Disease Prediction Model',
+      description: 'Developed and optimised a heart disease prediction model using machine learning algorithms to predict the likelihood of heart disease based on patient data.',
+      image: '',
+      technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib'],
+      github: '[link-to-code]',
+      live: '[link-to-demo]',
+      featured: true
+    },
+    {
+      title: 'Generating Art with AI for Low-End Devices',
+      description: 'Developed an AI-based art generation tool optimized for low-end devices, providing users with the ability to generate exact or approximate images based on their input.',
+      image: '',
+      technologies: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'Tkinter'],
+      github: '[link-to-code]',
+      live: '[link-to-demo]',
+      featured: true
+    },
   ],
 }; 

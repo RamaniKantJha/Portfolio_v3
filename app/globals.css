@@ -321,6 +321,9 @@ html, body, #__next, main {
     left: 7rem !important;
     bottom: 0rem !important;
   }
+  .section-hero-intro {
+    flex-direction: column-reverse !important;
+  }
 } 
 
 @media (max-width: 700px) and (min-width: 401px) {
