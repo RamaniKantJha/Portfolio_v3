@@ -2,11 +2,102 @@
 
 import { motion } from 'framer-motion'
 import { ExternalLink, Github, ArrowRight } from 'lucide-react'
-import { useRef } from 'react';
+import { useEffect, useState, useRef } from 'react';
 import { personalDetails } from '../personalDetails';
 
 const Projects = () => {
   const projects = personalDetails.projects;
+
+  // Theme detection for dynamic image switching
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    // Check if the root html element has the 'dark' class
+    const checkDark = () => {
+      setIsDarkMode(document.documentElement.classList.contains('dark'));
+    };
+    checkDark();
+    // Listen for class changes (e.g., via MutationObserver)
+    const observer = new MutationObserver(checkDark);
+    observer.observe(document.documentElement, { attributes: true, attributeFilter: ['class'] });
+    return () => observer.disconnect();
+  }, []);
+
+  // Map projects, swapping image for Portfolio Website based on theme
+  const themedProjects = projects.map((project) => {
+    if (project.title === 'Portfolio Website') {
+      return {
+        ...project,
+        image: isDarkMode ? '/assets/Portfolio_light.png' : '/assets/Portfolio_dark.png',
+      };
+    }
+    return project;
+  });
+
+  // Hover preview state
+  type ProjectType = typeof projects[number];
+  const [hoveredProject, setHoveredProject] = useState<ProjectType | null>(null);
+  const [mousePos, setMousePos] = useState({ x: 0, y: 0 });
+  const [previewPos, setPreviewPos] = useState({ x: 0, y: 0 });
+  const [hoverAnim, setHoverAnim] = useState(0);
+  const [isMobile, setIsMobile] = useState(false);
+  const sectionRef = useRef<HTMLDivElement>(null);
+  const [sectionRect, setSectionRect] = useState<{top: number, left: number, width: number, height: number}>({top: 0, left: 0, width: 0, height: 0});
+
+  // Detect mobile view
+  useEffect(() => {
+    const checkMobile = () => setIsMobile(window.innerWidth <= 600);
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
+  // Update section rect on mount and resize
+  useEffect(() => {
+    const updateRect = () => {
+      if (sectionRef.current) {
+        const rect = sectionRef.current.getBoundingClientRect();
+        setSectionRect({
+          top: rect.top + window.scrollY,
+          left: rect.left + window.scrollX,
+          width: rect.width,
+          height: rect.height,
+        });
+      }
+    };
+    updateRect();
+    window.addEventListener('resize', updateRect);
+    window.addEventListener('scroll', updateRect);
+    return () => {
+      window.removeEventListener('resize', updateRect);
+      window.removeEventListener('scroll', updateRect);
+    };
+  }, []);
+
+  // Animate preview position toward mouse position with a floating effect
+  useEffect(() => {
+    let animationFrame: number;
+    let startTime: number | null = null;
+    const animate = (time: number) => {
+      if (startTime === null) startTime = time;
+      const elapsed = time - startTime;
+      setHoverAnim(elapsed);
+      setPreviewPos(prev => {
+        const dx = mousePos.x - prev.x;
+        const dy = mousePos.y - prev.y;
+        const factor = 0.18;
+        return {
+          x: prev.x + dx * factor,
+          y: prev.y + dy * factor,
+        };
+      });
+      animationFrame = requestAnimationFrame(animate);
+    };
+    if (hoveredProject) {
+      animationFrame = requestAnimationFrame(animate);
+    }
+    return () => cancelAnimationFrame(animationFrame);
+  }, [mousePos, hoveredProject]);
 
   const carouselRef = useRef<HTMLDivElement>(null);
 
@@ -21,7 +112,7 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="section-projects section-padding bg-offwhite dark:bg-[#151515]">
+    <section id="projects" ref={sectionRef} className="section-projects section-padding bg-offwhite dark:bg-[#151515] relative">
       <div className="container-custom">
         <div className="text-center mb-8">
           <h3 className="text-2xl font-bold text-[#2d2d2d] dark:text-white mb-4">
@@ -34,9 +125,13 @@ const Projects = () => {
             className="flex flex-nowrap gap-6 overflow-x-auto pb-4 scrollbar-hide"
             style={{ scrollBehavior: 'smooth' }}
           >
-            {projects.map((project, index) => (
+            {themedProjects.map((project, index) => (
               <motion.div
                 key={project.title}
+                onMouseEnter={!isMobile ? () => setHoveredProject(project) : undefined}
+                onMouseMove={!isMobile ? e => setMousePos({ x: e.clientX + 24, y: e.clientY + 24 }) : undefined}
+                onMouseLeave={!isMobile ? () => setHoveredProject(null) : undefined}
+                onClick={isMobile ? () => setHoveredProject(project) : undefined}
                 initial={{ opacity: 0, x: 100 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 transition={{ duration: 0.8, delay: index * 0.1, ease: "easeOut" }}
@@ -127,6 +222,64 @@ const Projects = () => {
           </a>
         </div>
       </div>
+      {/* Floating project preview */}
+      {hoveredProject && (
+        <>
+          {isMobile && (
+            <div
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: sectionRect.width,
+                height: sectionRect.height,
+                zIndex: 999,
+                background: 'rgba(0,0,0,0.08)',
+              }}
+              onClick={() => setHoveredProject(null)}
+            ></div>
+          )}
+          <div
+            style={{
+              position: isMobile ? 'absolute' : 'fixed',
+              top: isMobile ? sectionRect.height * 0.6 : previewPos.y + 16 + Math.sin(hoverAnim / 400) * 10,
+              left: isMobile ? sectionRect.width / 2 : previewPos.x + 16 + Math.cos(hoverAnim / 400) * 10,
+              transform: isMobile ? 'translate(-50%, 0)' : undefined,
+              zIndex: 1001,
+              width: 360,
+              background: isDarkMode ? '#232323' : 'white',
+              color: isDarkMode ? 'white' : '#2d2d2d',
+              borderRadius: 20,
+              boxShadow: '0 8px 32px rgba(0,0,0,0.18)',
+              padding: 24,
+              pointerEvents: isMobile ? 'auto' : 'none',
+              opacity: 0.98,
+              transition: 'opacity 0.2s',
+            }}
+          >
+            {hoveredProject.image && (
+              <img
+                src={hoveredProject.image}
+                alt={hoveredProject.title}
+                style={{ width: '100%', borderRadius: 16, marginBottom: 16, objectFit: 'cover', height: 160 }}
+              />
+            )}
+            <h4 style={{ fontWeight: 'bold', fontSize: 22, marginBottom: 8 }}>
+              {hoveredProject.title}
+            </h4>
+            <p style={{ fontSize: 16 }}>
+              {hoveredProject.description}
+            </p>
+            {hoveredProject.technologies && (
+              <div style={{ marginTop: 12, display: 'flex', flexWrap: 'wrap', gap: 6 }}>
+                {hoveredProject.technologies.map((tech: string) => (
+                  <span key={tech} style={{ background: '#e0f7f4', color: '#2ec6a6', borderRadius: 8, padding: '2px 8px', fontSize: 13, marginRight: 4, marginBottom: 4 }}>{tech}</span>
+                ))}
+              </div>
+            )}
+          </div>
+        </>
+      )}
     </section>
   );
 };

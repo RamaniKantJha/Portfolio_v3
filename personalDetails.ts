@@ -59,16 +59,25 @@ export const personalDetails = {
     {
       title: 'Portfolio Website',
       description: 'A responsive portfolio website built with modern web technologies and smooth animations.',
-      image: '/assets/Portfolio_image.png',
+      image: '/assets/Portfolio_light.png',
       technologies: ['React', 'Framer Motion', 'Tailwind CSS', 'Vercel'],
       github: 'https://github.com/ramanikantjha/portfolio_v3',
       live: 'https://ramanikantjha.me',
       featured: true
     },
     {
+      title: 'Test Report Analyser',
+      description: 'A health report analyser built during a 5-day AWS workshop using AWS IDP. It processes uploaded reports, provides insights, and suggests health recommendations.',
+      image: '/assets/test-report-app.png',
+      technologies: ['Python', 'Flask', 'AWS IDP', 'OCR', 'Health Analysis'],
+      github: 'https://github.com/yourusername/test-report-analyser', // replace with actual
+      live: 'https://your-demo-link.com', // optional; replace if hosted
+      featured: false
+    },
+    {
       title: 'AI ChatBot',
       description: 'An intelligent chatbot built using NLP and React, capable of holding contextual conversations.',
-      image: '',
+      image: '/assets/ChatBot.png',
       technologies: ['Python', 'FastAPI', 'React'],
       github: '[link-to-code]',
       live: '[link-to-demo]',
@@ -77,7 +86,7 @@ export const personalDetails = {
     {
       title: 'Image Enhancer',
       description: 'Developed an advanced image enhancement tool leveraging deep learning techniques to improve image quality, resolution, and clarity. The tool supports denoising, super-resolution, and color correction, making it suitable for both professional and personal use.',
-      image: '',
+      image: '/assets/ImageEnhancer.png',
       technologies: ['Python', 'OpenCV', 'TensorFlow', 'Keras', 'NumPy'],
       github: '[link-to-code]',
       live: '[link-to-demo]',
@@ -86,7 +95,7 @@ export const personalDetails = {
     {
       title: 'Ghibli Cartoonifier',
       description: 'Converts real images into Ghibli-style art using AnimeGANv2 and a FastAPI backend.',
-      image: '',
+      image: '/assets/Ghibli.png',
       technologies: ['PyTorch', 'FastAPI', 'React', 'AnimeGAN'],
       github: '[link-to-code]',
       live: '[link-to-demo]',
@@ -95,7 +104,7 @@ export const personalDetails = {
     {
       title: 'Heart Disease Prediction Model',
       description: 'Developed and optimised a heart disease prediction model using machine learning algorithms to predict the likelihood of heart disease based on patient data.',
-      image: '',
+      image: '/assets/heartDisease.png',
       technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib'],
       github: '[link-to-code]',
       live: '[link-to-demo]',
@@ -104,7 +113,7 @@ export const personalDetails = {
     {
       title: 'Generating Art with AI for Low-End Devices',
       description: 'Developed an AI-based art generation tool optimized for low-end devices, providing users with the ability to generate exact or approximate images based on their input.',
-      image: '',
+      image: '/assets/AI Art Generation.png',
       technologies: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'Tkinter'],
       github: '[link-to-code]',
       live: '[link-to-demo]',
