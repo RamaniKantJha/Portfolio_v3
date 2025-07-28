@@ -21,33 +21,15 @@ export const personalDetails = {
     }
   ],
   workExperience: [
-    {
-      title: 'Senior Software Engineer',
-      company: 'TechCorp Solutions',
-      location: 'New Delhi, India',
-      period: 'Jan 2023 - Present',
-      description: 'Leading development of enterprise-scale applications using React, Node.js, and AWS. Mentoring junior developers and implementing best practices.',
-      technologies: ['React', 'Node.js', 'TypeScript', 'AWS', 'PostgreSQL'],
-      link: '#'
-    },
-    {
-      title: 'Full-Stack Developer',
-      company: 'InnovateTech',
-      location: 'Bangalore, India',
-      period: 'Mar 2021 - Dec 2022',
-      description: 'Developed and maintained multiple web applications. Collaborated with cross-functional teams to deliver high-quality software solutions.',
-      technologies: ['React', 'Express.js', 'MongoDB', 'Docker', 'Redis'],
-      link: '#'
-    },
-    {
-      title: 'Frontend Developer',
-      company: 'StartupXYZ',
-      location: 'Mumbai, India',
-      period: 'Jun 2020 - Feb 2021',
-      description: 'Built responsive user interfaces and implemented modern frontend architectures. Worked closely with designers to create intuitive user experiences.',
-      technologies: ['React', 'Vue.js', 'Sass', 'Webpack', 'Jest'],
-      link: '#'
-    }
+  {
+    title: 'Web Developer Intern',
+    company: 'TwoWaits Technologies Pvt. Ltd.',
+    location: 'Greater Noida, Uttar Pradesh, India',
+    period: 'Jul 2022 - Aug 2022',
+    description: 'Developed the frontend of a gym website using HTML, CSS, and JavaScript. Collaborated with designers to implement a responsive and user-friendly interface. Integrated interactive components and performed cross-browser compatibility testing.',
+    technologies: ['HTML', 'CSS', 'JavaScript'],
+    link: '#'
+  }
   ],
   stats: {
     currentRole: 'AI/ML Intern',
