@@ -90,7 +90,7 @@ const TypingAnimation = ({ text, speed = 100, delay = 0, className = '', isHero 
   // For hero section, render with special styling
   if (isHero) {
     // Highlight substrings: 'end', 'and', '&', '-', 'intern' (case-insensitive, anywhere in word)
-    const highlightRegex = /(end|and|&|-|intern)/gi;
+    const highlightRegex = /(end|and|&|-|Game|stack|intern)/gi;
     // Split displayText into array of matches and non-matches
     const parts = [];
     let lastIndex = 0;

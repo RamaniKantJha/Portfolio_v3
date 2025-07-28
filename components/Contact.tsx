@@ -1,10 +1,10 @@
 'use client'
 
 const socials = [
-  { label: 'Behance', url: 'https://behance.net/ramanikantjha' },
-  { label: 'Instagram', url: 'https://instagram.com/ramanikantjha' },
-  { label: 'Twitter', url: 'https://twitter.com/ramanikantjha' },
-  { label: 'Dribbble', url: 'https://dribbble.com/ramanikantjha' },
+  { label: 'Behance', url: 'https://behance.net/vishalkumar' },
+  { label: 'Instagram', url: 'https://instagram.com/vishalkumar' },
+  { label: 'Twitter', url: 'https://twitter.com/vishalkumar' },
+  { label: 'Dribbble', url: 'https://dribbble.com/vishalkumar' },
 ]
 
 const Contact = () => {
@@ -18,7 +18,7 @@ const Contact = () => {
           <p className="text-lg text-[#2d2d2d] dark:text-white mb-8 leading-relaxed">
             Interested in working together or want to say hello? Connect with me on any of the platforms below or send an email. I'm currently available for freelance projects worldwide.
           </p>
-          <a href="mailto:ramanikant@example.com" className="btn-primary mb-4 dark:bg-[#232323] dark:text-white dark:border-mint text-[#2d2d2d] dark:text-white">
+          <a href="mailto:@example.com" className="btn-primary mb-4 dark:bg-[#232323] dark:text-white dark:border-mint text-[#2d2d2d] dark:text-white">
             Email Me
           </a>
           <div className="flex flex-wrap gap-4 mt-4">

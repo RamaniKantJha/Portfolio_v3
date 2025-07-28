@@ -1,7 +1,7 @@
 {
   "name": "my-portfolio",
   "version": "0.1.0",
-  "description": "Portfolio website of Ramani Kant Jha",
+  "description": "Portfolio website of Vishal Kumar",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",
@@ -33,6 +33,6 @@
     "next.js",
     "typescript"
   ],
-  "author": "Ramani Kant Jha",
+  "author": "Vishal Kumar",
   "license": "MIT"
 }

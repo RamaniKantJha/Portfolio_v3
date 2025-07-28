@@ -3,22 +3,22 @@ import './globals.css'
 import Header from '@/components/Header'
 
 export const metadata: Metadata = {
-  title: 'Ramani Kant Jha - AI/ML Intern & Developer',
-  description: 'Portfolio of Ramani Kant Jha: AI/ML Intern, Full-stack Developer, and Data Science Enthusiast. Specialized in React, Python, and Machine Learning.',
+  title: 'Vishal Kumar - AI/ML Intern & Developer',
+  description: 'Portfolio of Vishal Kumar: AI/ML Intern, Full-stack Developer, and Data Science Enthusiast. Specialized in React, Python, and Machine Learning.',
   keywords: ['AI/ML Intern', 'Full-stack Developer', 'React', 'Python', 'Machine Learning', 'Portfolio'],
-  authors: [{ name: 'Ramani Kant Jha' }],
-  creator: 'Ramani Kant Jha',
+  authors: [{ name: 'Vishal Kumar' }],
+  creator: 'Vishal Kumar',
   openGraph: {
-    title: 'Ramani Kant Jha - AI/ML Intern & Developer',
-    description: 'Portfolio of Ramani Kant Jha: AI/ML Intern, Full-stack Developer, and Data Science Enthusiast.',
-    url: 'https://ramanikantjha.me',
-    siteName: 'Ramani Kant Jha Portfolio',
+    title: 'Vishal Kumar - AI/ML Intern & Developer',
+    description: 'Portfolio of Vishal Kumar: AI/ML Intern, Full-stack Developer, and Data Science Enthusiast.',
+    url: 'https://vishalkumar.me',
+    siteName: 'Vishal Kumar Portfolio',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ramani Kant Jha - AI/ML Intern & Developer',
-    description: 'Portfolio of Ramani Kant Jha: AI/ML Intern, Full-stack Developer, and Data Science Enthusiast.',
+    title: 'Vishal Kumar - AI/ML Intern & Developer',
+    description: 'Portfolio of Vishal Kumar: AI/ML Intern, Full-stack Developer, and Data Science Enthusiast.',
   },
 }
 
