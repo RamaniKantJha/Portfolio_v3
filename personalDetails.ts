@@ -1,7 +1,7 @@
 // Personal information and data for the portfolio
 export const personalDetails = {
   name: 'Ramani Kant Jha',
-  designation: 'AI & Machine Learning Intern',
+  designation: ['FrontEND Developer', 'AI & Machine Learning Intern'],
   email: 'ramanikant@example.com',
   aboutMe: `I'm a recent B.Tech graduate in Computer Science and Engineering with a passion for AI, data science, and full-stack development. From building responsive web apps to optimizing machine learning models for real-world use cases, I strive to combine analytical thinking with creative expression. A problem-solver at heart, I'm constantly pushing the boundaries of what technology can do.`,
   socials: [

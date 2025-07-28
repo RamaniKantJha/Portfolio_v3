@@ -89,6 +89,13 @@ const Hero = ({ startTyping = false }: HeroProps) => {
               </div>
             </div>
           </div>
+          {/* Downward arrow for all screens */}
+          <div className="mt-8 w-full flex justify-center">
+            <span
+              className="arrow-down text-[2.5rem] md:text-[4rem] lg:text-[6rem]"
+              style={{ color: '#2ec6a6', lineHeight: 1, animation: 'bounceDown 1.2s infinite' }}
+            >&#8595;</span>
+          </div>
         </div>
       </section>
       {/* Hero intro section with text and cards */}
