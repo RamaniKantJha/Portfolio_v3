@@ -1,10 +1,10 @@
 'use client'
 
 const socials = [
-  { label: 'Behance', url: 'https://behance.net/vishalkumar' },
-  { label: 'Instagram', url: 'https://instagram.com/vishalkumar' },
-  { label: 'Twitter', url: 'https://twitter.com/vishalkumar' },
-  { label: 'Dribbble', url: 'https://dribbble.com/vishalkumar' },
+  { label: 'Behance', url: 'https://behance.net/ramanikantjha' },
+  { label: 'Instagram', url: 'https://instagram.com/ramanikantjha' },
+  { label: 'Twitter', url: 'https://twitter.com/ramanikantjha' },
+  { label: 'Dribbble', url: 'https://dribbble.com/ramanikantjha' },
 ]
 
 const Contact = () => {

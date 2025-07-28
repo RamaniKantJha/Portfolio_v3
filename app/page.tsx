@@ -58,7 +58,7 @@ export default function Home() {
             transition={{ duration: 0.8, ease: "easeOut" }}
             className="text-4xl md:text-5xl font-bold text-[#2d2d2d] dark:text-white mb-4"
           >
-            Vishal <span className="text-mint font-accent">Kumar</span>
+            Ramani Kant <span className="text-mint font-accent">jha</span>
           </motion.div>
           
           {/* "is a" slides in */}

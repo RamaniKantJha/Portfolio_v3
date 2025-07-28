@@ -3,71 +3,42 @@
 import { motion } from 'framer-motion';
 
 const skills = [
-    {
+  {
     category: 'Frontend',
     items: [
-      { name: 'HTML', level: 90 },
-      { name: 'CSS', level: 85 },
+      { name: 'HTML', level: 95 },
+      { name: 'CSS', level: 90 },
       { name: 'JavaScript', level: 90 },
-      { name: 'TypeScript', level: 85 },
-      { name: 'React.js', level: 90 },
-      { name: 'Next.js', level: 80 },
-      { name: 'Bootstrap', level: 80 },
-      { name: 'Tailwind', level: 75 },
-      { name: 'React Native', level: 70 },
-      { name: 'Figma to UI', level: 75 }
+      { name: 'React', level: 85 },
+      { name: 'GUI Design (Tkinter)', level: 70 },
+      { name: 'Blender 3D', level: 50 }
     ],
   },
   {
-    category: 'Backend & API Development',
+    category: 'Backend & Data Science',
     items: [
-      { name: 'Node.js', level: 95 },
-      { name: 'Express.js', level: 90 },
-      { name: 'Socket.io', level: 90 },
-      { name: 'RESTful APIs', level: 90 },
-      { name: 'RabbitMQ (AMQP)', level: 80 },
-      { name: 'MVC Architecture', level: 85 }
+      { name: 'Python', level: 95 },
+      { name: 'Data Science', level: 90 },
+      { name: 'Machine Learning', level: 85 },
+      { name: 'MySQL', level: 75 },
+      { name: 'DBMS', level: 75 },
+      { name: 'OpenCV', level: 75 },
+      { name: 'TensorFlow', level: 75 },
+      { name: 'Keras', level: 75 },
+      { name: 'Scikit-learn', level: 80 },
+      { name: 'Pandas', level: 85 },
+      { name: 'NumPy', level: 85 },
+      { name: 'Matplotlib', level: 80 }
     ],
   },
   {
-    category: 'Databases',
+    category: 'Other',
     items: [
-      { name: 'MySQL', level: 85 },
-      { name: 'MongoDB', level: 80 },
-      { name: 'Redis', level: 85 },
-      { name: 'SQL', level: 80 },
-      { name: 'Mongoose', level: 75 },
-      { name: 'Sequelize', level: 75 }
+      { name: 'Figma', level: 80 },
+      { name: 'Flask', level: 70 },
+      { name: 'Next.js', level: 70 },
+      { name: 'MERN Stack', level: 70 }
     ],
-  },
-  {
-    category: 'DevOps & Cloud',
-    items: [
-      { name: 'AWS (EC2, S3, Lambda)', level: 80 },
-      { name: 'Docker', level: 85 },
-      { name: 'PM2', level: 75 },
-      { name: 'Jenkins', level: 70 },
-      { name: 'Kubernetes', level: 65 },
-      { name: 'Docker Hub', level: 75 },
-      { name: 'CI/CD', level: 75 }
-    ],
-  },
-  {
-    category: 'Tools & Utilities',
-    items: [
-      { name: 'Postman', level: 85 },
-      { name: 'Git', level: 90 },
-      { name: 'GitHub / GitHub Actions', level: 85 },
-      { name: 'DB Diagram', level: 70 },
-      { name: 'Version Control', level: 85 }
-    ],
-  },
-  {
-    category: 'Languages & Programming',
-    items: [
-      { name: 'C/C++', level: 70 },
-      { name: 'Python', level: 75 }
-    ]
   },
 ]
 
