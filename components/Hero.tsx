@@ -67,7 +67,7 @@ const Hero = ({ startTyping = false }: HeroProps) => {
                   isHero={true}
                 />
               ) : (
-                personalDetails.designation.split(' ').map((word, i) =>
+                personalDetails.designation.join(' ').split(' ').map((word, i) =>
                   word === '&' ? (
                     <span key={i} className="hero-accent text-mint font-accent">&</span>
                   ) : word === 'Intern' ? (
