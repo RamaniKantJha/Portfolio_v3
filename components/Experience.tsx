@@ -6,7 +6,7 @@ import { Calendar, MapPin, ExternalLink } from 'lucide-react'
 
 const Experience = () => {
   const experiences = personalDetails.workExperience;
-  const education = personalDetails.education[0];
+  const education = personalDetails.education;
 
   return (
     <section id="experience" className="section-experience section-padding bg-offwhite dark:bg-[#151515]">
@@ -90,7 +90,7 @@ const Experience = () => {
                       {experience.technologies.map((tech, techIndex) => (
                         <span
                           key={techIndex}
-                          className="px-3 py-1 bg-primary-100 text-mint text-sm rounded-full font-medium font-accent"
+                          className="px-3 py-1 bg-gray-100 dark:bg-[#2a2a2a] text-mint text-sm rounded-full font-medium font-accent"
                         >
                           {tech}
                         </span>
@@ -117,27 +117,39 @@ const Experience = () => {
             </h3>
           </div>
 
-          <div className="max-w-2xl mx-auto">
-            <div className="card p-8 text-center bg-white dark:bg-[#232323]">
-              <h4 className="text-xl font-bold text-[#2d2d2d] dark:text-white mb-2">
-                {education.degree}
-              </h4>
-              <p className="text-lg text-mint font-accent mb-4">
-                {education.institution}
-              </p>
-              <div className="flex items-center justify-center space-x-4 text-sm text-[#2d2d2d] dark:text-white">
-                <div className="flex items-center space-x-1">
-                  <Calendar size={14} />
-                  <span className="text-[#2d2d2d] dark:text-white">{education.period}</span>
-                </div>
-                <div className="flex items-center space-x-1">
-                  <MapPin size={14} />
-                  <span className="text-[#2d2d2d] dark:text-white">{education.location}</span>
-                </div>
-              </div>
-              <p className="mt-4 text-[#2d2d2d] dark:text-white">
-                {education.details}
-              </p>
+          <div className="max-w-4xl mx-auto">
+            <div className="grid md:grid-cols-2 gap-8">
+              {education.map((edu, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <div className="card p-8 text-center bg-white dark:bg-[#232323] h-full hover:shadow-xl transition-shadow duration-300">
+                    <h4 className="text-xl font-bold text-[#2d2d2d] dark:text-white mb-2">
+                      {edu.degree}
+                    </h4>
+                    <p className="text-lg text-mint font-accent mb-4">
+                      {edu.institution}
+                    </p>
+                    <div className="flex flex-col space-y-2 text-sm text-[#2d2d2d] dark:text-white mb-4">
+                      <div className="flex items-center justify-center space-x-1">
+                        <Calendar size={14} />
+                        <span>{edu.period}</span>
+                      </div>
+                      <div className="flex items-center justify-center space-x-1">
+                        <MapPin size={14} />
+                        <span>{edu.location}</span>
+                      </div>
+                    </div>
+                    <p className="text-[#2d2d2d] dark:text-white">
+                      {edu.details}
+                    </p>
+                  </div>
+                </motion.div>
+              ))}
             </div>
           </div>
         </motion.div>

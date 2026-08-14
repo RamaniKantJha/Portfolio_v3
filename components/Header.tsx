@@ -14,17 +14,15 @@ const Header = () => {
 
   const [scrolled, setScrolled] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(false);
+  const [darkMode, setDarkMode] = useState(true);
   const [isMobile, setIsMobile] = useState(false);
   const [socialsOpen, setSocialsOpen] = useState(false); // Add state for mobile socials dropdown
 
-  // Set default mode and mobile state based on screen size
+  // Set mobile state based on screen size
   useEffect(() => {
     const mq = window.matchMedia('(max-width: 400px)');
-    setDarkMode(mq.matches);
     setIsMobile(mq.matches);
     const handleResize = () => {
-      setDarkMode(window.matchMedia('(max-width: 400px)').matches);
       setIsMobile(window.matchMedia('(max-width: 400px)').matches);
     };
     mq.addEventListener('change', handleResize);

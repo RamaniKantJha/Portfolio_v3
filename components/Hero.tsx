@@ -30,7 +30,21 @@ interface HeroProps {
 
 const Hero = ({ startTyping = false }: HeroProps) => {
   const [scrollAngle, setScrollAngle] = useState(0);
+  const [currentTime, setCurrentTime] = useState<string>('');
   const heroRef = useRef<HTMLDivElement>(null);
+
+  // Update current time
+  useEffect(() => {
+    const updateTime = () => {
+      const now = new Date();
+      const hours = String(now.getHours()).padStart(2, '0');
+      const minutes = String(now.getMinutes()).padStart(2, '0');
+      setCurrentTime(`${hours}:${minutes}`);
+    };
+    updateTime();
+    const interval = setInterval(updateTime, 1000);
+    return () => clearInterval(interval);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -84,7 +98,7 @@ const Hero = ({ startTyping = false }: HeroProps) => {
                 <span className="text-gray-400 dark:text-gray-200 text-xs font-semibold uppercase">Freelance Worldwide</span>
               </div>
               <div className="flex flex-col items-end gap-2 text-gray-400 dark:text-gray-200 text-xs font-semibold uppercase">
-                <span className="text-gray-400 dark:text-gray-200 text-xs font-semibold uppercase">My Local Time 16:38</span>
+                <span className="text-gray-400 dark:text-gray-200 text-xs font-semibold uppercase">My Local Time {currentTime}</span>
                 <span className="text-gray-400 dark:text-gray-200 text-xs font-semibold uppercase">GMT (+5:30)</span>
               </div>
             </div>

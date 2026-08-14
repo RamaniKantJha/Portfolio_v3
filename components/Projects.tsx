@@ -160,13 +160,13 @@ const Projects = () => {
                     {project.technologies.slice(0, 3).map((tech) => (
                       <span
                         key={tech}
-                        className="px-2 py-1 bg-gray-100 text-mint text-xs rounded font-medium font-accent"
+                        className="px-2 py-1 bg-gray-100 dark:bg-[#2a2a2a] text-mint text-xs rounded font-medium font-accent"
                       >
                         {tech}
                       </span>
                     ))}
                     {project.technologies.length > 3 && (
-                      <span className="px-2 py-1 bg-gray-100 text-mint text-xs rounded font-medium font-accent">
+                      <span className="px-2 py-1 bg-gray-100 dark:bg-[#2a2a2a] text-mint text-xs rounded font-medium font-accent">
                         +{project.technologies.length - 3}
                       </span>
                     )}

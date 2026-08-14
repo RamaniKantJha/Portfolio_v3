@@ -4,40 +4,81 @@ import { motion } from 'framer-motion';
 
 const skills = [
   {
-    category: 'Frontend',
+    category: 'Frontend & Web',
     items: [
       { name: 'HTML', level: 95 },
-      { name: 'CSS', level: 90 },
+      { name: 'CSS', level: 95 },
       { name: 'JavaScript', level: 90 },
-      { name: 'React', level: 85 },
-      { name: 'GUI Design (Tkinter)', level: 70 },
-      { name: 'Blender 3D', level: 50 }
+      { name: 'TypeScript', level: 85 },
+      { name: 'React.js', level: 85 },
+      { name: 'Next.js', level: 75 },
+      { name: 'Tailwind CSS', level: 90 },
+      { name: 'Framer Motion', level: 80 }
     ],
   },
   {
-    category: 'Backend & Data Science',
+    category: 'Backend & APIs',
     items: [
       { name: 'Python', level: 95 },
-      { name: 'Data Science', level: 90 },
-      { name: 'Machine Learning', level: 85 },
-      { name: 'MySQL', level: 75 },
-      { name: 'DBMS', level: 75 },
-      { name: 'OpenCV', level: 75 },
-      { name: 'TensorFlow', level: 75 },
-      { name: 'Keras', level: 75 },
-      { name: 'Scikit-learn', level: 80 },
-      { name: 'Pandas', level: 85 },
-      { name: 'NumPy', level: 85 },
-      { name: 'Matplotlib', level: 80 }
+      { name: 'FastAPI', level: 85 },
+      { name: 'Flask', level: 85 },
+      { name: 'Node.js', level: 75 },
+      { name: 'Express.js', level: 75 },
+      { name: 'REST APIs', level: 90 },
+      { name: 'SQL', level: 85 },
+      { name: 'C/C++', level: 70 }
     ],
   },
   {
-    category: 'Other',
+    category: 'AI & Data Science',
     items: [
-      { name: 'Figma', level: 80 },
-      { name: 'Flask', level: 70 },
-      { name: 'Next.js', level: 70 },
-      { name: 'MERN Stack', level: 70 }
+      { name: 'Machine Learning', level: 85 },
+      { name: 'TensorFlow', level: 80 },
+      { name: 'PyTorch', level: 80 },
+      { name: 'Scikit-learn', level: 85 },
+      { name: 'Pandas', level: 90 },
+      { name: 'NumPy', level: 90 },
+      { name: 'OpenCV', level: 80 },
+      { name: 'NLP', level: 75 }
+    ],
+  },
+  {
+    category: 'Databases & Tools',
+    items: [
+      { name: 'MySQL', level: 85 },
+      { name: 'MongoDB', level: 75 },
+      { name: 'Git & GitHub', level: 90 },
+      { name: 'GitHub Actions', level: 75 },
+      { name: 'Postman', level: 85 },
+      { name: 'Vercel', level: 85 },
+      { name: 'AWS', level: 70 },
+      { name: 'Docker', level: 70 }
+    ],
+  },
+  {
+    category: 'Application Support',
+    items: [
+      { name: 'System Troubleshooting', level: 90 },
+      { name: 'Application Testing', level: 85 },
+      { name: 'Technical Documentation', level: 85 },
+      { name: 'Problem Solving', level: 95 },
+      { name: 'Customer Support', level: 90 },
+      { name: 'Incident Resolution', level: 85 },
+      { name: 'REST Architecture', level: 85 },
+      { name: 'CI/CD Concepts', level: 75 }
+    ],
+  },
+  {
+    category: 'Enterprise Systems',
+    items: [
+      { name: 'Finacle Core Banking', level: 80 },
+      { name: 'Digital Banking Systems', level: 80 },
+      { name: 'Data Management', level: 85 },
+      { name: 'MVC Architecture', level: 85 },
+      { name: 'Version Control', level: 90 },
+      { name: 'DBMS Concepts', level: 80 },
+      { name: 'Figma', level: 75 },
+      { name: 'Matplotlib', level: 80 }
     ],
   },
 ]

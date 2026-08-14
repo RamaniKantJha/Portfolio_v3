@@ -1,13 +1,10 @@
 'use client'
 
-const socials = [
-  { label: 'Behance', url: 'https://behance.net/ramanikantjha' },
-  { label: 'Instagram', url: 'https://instagram.com/ramanikantjha' },
-  { label: 'Twitter', url: 'https://twitter.com/ramanikantjha' },
-  { label: 'Dribbble', url: 'https://dribbble.com/ramanikantjha' },
-]
+import { personalDetails } from '../personalDetails';
 
 const Contact = () => {
+  const socials = personalDetails.socials.filter(s => ['Behance', 'Instagram', 'Twitter', 'Dribbble', 'GitHub'].includes(s.label));
+
   return (
     <section id="contact" className="section-contact section-padding bg-offwhite dark:bg-[#151515]">
       <div className="container-custom">
@@ -16,9 +13,9 @@ const Contact = () => {
             Let's <span className="text-mint font-accent italic">Talk</span>
           </h2>
           <p className="text-lg text-[#2d2d2d] dark:text-white mb-8 leading-relaxed">
-            Interested in working together or want to say hello? Connect with me on any of the platforms below or send an email. I'm currently available for freelance projects worldwide.
+            Interested in working together or want to say hello? Connect with me on any of the platforms below or send an email. I'm currently available for freelance projects and full-time opportunities.
           </p>
-          <a href="mailto:@example.com" className="btn-primary mb-4 dark:bg-[#232323] dark:text-white dark:border-mint text-[#2d2d2d] dark:text-white">
+          <a href={`mailto:${personalDetails.email}`} className="btn-primary mb-4 dark:bg-[#232323] dark:text-white dark:border-mint text-[#2d2d2d] dark:text-white">
             Email Me
           </a>
           <div className="flex flex-wrap gap-4 mt-4">
