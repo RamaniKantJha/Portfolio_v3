@@ -20,13 +20,12 @@ const Header = () => {
 
   // Set mobile state based on screen size
   useEffect(() => {
-    const mq = window.matchMedia('(max-width: 400px)');
-    setIsMobile(mq.matches);
     const handleResize = () => {
-      setIsMobile(window.matchMedia('(max-width: 400px)').matches);
+      setIsMobile(window.innerWidth <= 768);
     };
-    mq.addEventListener('change', handleResize);
-    return () => mq.removeEventListener('change', handleResize);
+    handleResize(); // Call on mount to set initial state
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   // Apply dark mode class to document
@@ -56,51 +55,49 @@ const Header = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Auto-close mobile menu when screen gets larger
+  // Auto-close mobile menu when screen gets larger or menu opened
   useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth > 400) setMobileOpen(false);
-    };
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    if (window.innerWidth > 768) {
+      setMobileOpen(false);
+    }
+  }, [isMobile]);
 
   // Filter social links for the dropdown
   const socials = personalDetails.socials.filter(s => ['Behance', 'Instagram', 'Twitter', 'Dribbble'].includes(s.label));
 
   return (
     <header
-      className={`section-header w-full px-8 pt-10 pb-6 flex items-center justify-between z-50 fixed top-0 transition-all transition-[background,backdrop-filter] duration-500 will-change-[background,backdrop-filter] ${scrolled ? (darkMode ? 'bg-mint/70 backdrop-blur-md shadow-lg' : 'bg-mint/70 backdrop-blur-md shadow-lg') : (darkMode ? 'bg-[#151515]' : 'bg-transparent')} ${scrolled ? 'text-[#0f172a]' : (darkMode ? 'text-white' : 'text-[#2d2d2d]')}`}
+      className={`section-header w-full px-3 sm:px-4 md:px-8 pt-4 sm:pt-6 md:pt-10 pb-3 sm:pb-4 md:pb-6 flex items-center justify-between z-50 fixed top-0 transition-all transition-[background,backdrop-filter] duration-500 will-change-[background,backdrop-filter] ${scrolled ? (darkMode ? 'bg-mint/70 backdrop-blur-md shadow-lg' : 'bg-mint/70 backdrop-blur-md shadow-lg') : (darkMode ? 'bg-[#151515]' : 'bg-transparent')} ${scrolled ? 'text-[#0f172a]' : (darkMode ? 'text-white' : 'text-[#2d2d2d]')}`}
       style={scrolled ? { background: darkMode ? 'rgba(46, 230, 166, 0.7)' : 'rgba(46, 230, 166, 0.7)', backdropFilter: 'blur(12px)' } : (darkMode ? { background: DARK_BG } : {})}
     >
       {/* Brand name or dark mode toggle on mobile */}
       {isMobile ? (
         <button
-          className="p-2 rounded-full border border-mint bg-transparent hover:bg-mint/20 transition-colors duration-200"
+          className="p-1.5 sm:p-2 rounded-full border border-mint bg-transparent hover:bg-mint/20 transition-colors duration-200"
           aria-label="Toggle dark mode"
           onClick={() => setDarkMode((d) => !d)}
         >
           {darkMode ? (
             // Moon icon
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-mint" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-6 sm:w-6 text-mint" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12.79A9 9 0 1111.21 3a7 7 0 109.79 9.79z" /></svg>
           ) : (
             // Sun icon
-            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6 text-mint" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.07l-.71.71M21 12h-1M4 12H3m16.66 6.66l-.71-.71M4.05 4.93l-.71-.71M12 5a7 7 0 100 14 7 7 0 000-14z" /></svg>
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-4 w-4 sm:h-6 sm:w-6 text-mint" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m8.66-13.66l-.71.71M4.05 19.07l-.71.71M21 12h-1M4 12H3m16.66 6.66l-.71-.71M4.05 4.93l-.71-.71M12 5a7 7 0 100 14 7 7 0 000-14z" /></svg>
           )}
         </button>
       ) : (
-        <a href="#home" className={`font-semibold text-base nav-link !no-underline tracking-widest ${scrolled ? 'text-[#0f172a]' : (darkMode ? 'text-white' : 'text-[#2d2d2d]')}`}>{personalDetails.name}</a>
+        <a href="#home" className={`font-semibold text-sm sm:text-base nav-link !no-underline tracking-widest ${scrolled ? 'text-[#0f172a]' : (darkMode ? 'text-white' : 'text-[#2d2d2d]')}`}>{personalDetails.name}</a>
       )}
       {/* Mobile menu toggle (hamburger) always visible on mobile */}
       <button
-        className={`block md:hidden ml-auto focus:outline-none hamburger-btn ${scrolled ? 'text-[#0f172a]' : (darkMode ? 'text-white' : 'text-[#2d2d2d]')}`}
-        style={{ display: isMobile ? 'block' : 'none' }}
+        className="block md:hidden ml-auto focus:outline-none hamburger-btn"
         aria-label="Open menu"
         onClick={() => setMobileOpen((v) => !v)}
+        style={{ color: scrolled ? '#0f172a' : (darkMode ? 'white' : '#2d2d2d') }}
       >
-        <span className={`block w-8 h-1 mb-1 rounded ${scrolled ? '!bg-[#0f172a]' : (darkMode ? '!bg-white' : '!bg-[#2d2d2d]')}`}></span>
-        <span className={`block w-8 h-1 mb-1 rounded ${scrolled ? '!bg-[#0f172a]' : (darkMode ? '!bg-white' : '!bg-[#2d2d2d]')}`}></span>
-        <span className={`block w-8 h-1 rounded ${scrolled ? '!bg-[#0f172a]' : (darkMode ? '!bg-white' : '!bg-[#2d2d2d]')}`}></span>
+        <span className="block w-6 h-1 mb-1 rounded" style={{ background: scrolled ? '#0f172a' : (darkMode ? 'white' : '#2d2d2d') }}></span>
+        <span className="block w-6 h-1 mb-1 rounded" style={{ background: scrolled ? '#0f172a' : (darkMode ? 'white' : '#2d2d2d') }}></span>
+        <span className="block w-6 h-1 rounded" style={{ background: scrolled ? '#0f172a' : (darkMode ? 'white' : '#2d2d2d') }}></span>
       </button>
       {/* Desktop navigation (hidden on mobile) */}
       {!isMobile && (
