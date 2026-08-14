@@ -330,50 +330,68 @@ html, body, #__next, main {
   }
 } 
 
-@media (max-width: 700px) and (min-width: 401px) {
-  html, body {
-    overflow-x: hidden !important;
-  }
-  .hero-portrait-card-1 {
-    left: 12rem !important;
-    bottom: -15rem !important;
-  }
-  .hero-portrait-card-2 {
-    left: 15rem !important;
-    bottom: -20rem !important;
-  }
-  .hero-portrait-card-3 {
-    left: 17rem !important;
-    bottom: -25rem !important;
-  }
-}
-
-.py-24 {
-  padding-bottom: 0 !important;
-} 
-
-@media (max-width: 767px) and (min-width: 701px) {
+@media (min-width: 401px) and (max-width: 767px) {
   html, body {
     overflow-x: hidden !important;
   }
 
+  .section-hero-intro {
+    flex-direction: column-reverse !important;
+    padding-bottom: 4rem !important;
+  }
+
+  .hero-cards-below {
+    min-height: 520px;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+
   .hero-portrait-card-1 {
-    left: 12rem !important;
-    bottom: -15rem !important;
+    left: 3rem !important;
+    bottom: 25rem !important;
   }
   .hero-portrait-card-2 {
-    left: 15rem !important;
-    bottom: -20rem !important;
+    left: 5rem !important;
+    bottom: 13rem !important;
   }
   .hero-portrait-card-3 {
-    left: 17rem !important;
-    bottom: -25rem !important;
+    left: 7rem !important;
+    bottom: 0rem !important;
   }
 }
 
-.py-24 {
-  padding-bottom: 0 !important;
-} 
+@media (min-width: 768px) and (max-width: 899px) {
+  html, body {
+    overflow-x: hidden !important;
+  }
+
+  .section-hero-intro {
+    padding-bottom: 6rem !important;
+  }
+
+  .hero-cards-below {
+    min-height: 820px;
+    margin-bottom: 2rem;
+  }
+
+  .hero-portrait-card {
+    width: 300px !important;
+    height: 460px !important;
+  }
+
+  .hero-portrait-card-1 {
+    left: 6rem !important;
+    bottom: 42rem !important;
+  }
+  .hero-portrait-card-2 {
+    left: 10rem !important;
+    bottom: 25rem !important;
+  }
+  .hero-portrait-card-3 {
+    left: 14rem !important;
+    bottom: 5rem !important;
+  }
+}
 
 @media (max-width: 1300px) and (min-width: 900px) {
   html, body {
