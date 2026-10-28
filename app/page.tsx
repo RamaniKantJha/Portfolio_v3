@@ -80,7 +80,7 @@ export default function Home() {
           >
             {showTyping && (
               <TypingAnimation 
-                text="AI & Machine Learning Intern"
+                text="Data Analyst"
                 speed={150}
                 delay={1000}
                 className="text-4xl md:text-5xl font-bold text-[#2d2d2d] dark:text-white"
