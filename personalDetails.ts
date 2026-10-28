@@ -1,7 +1,7 @@
 // Personal information and data for the portfolio
 export const personalDetails = {
   name: 'Ramani Kant Jha',
-  designation: ['Data Analyst', 'Python & SQL', 'Machine Learning'],
+  designation: ['Data Analyst', 'Python & ML Engineer'],
   email: 'kantramani01@gmail.com',
   phone: '+91 7840030847',
   location: 'Delhi, India',
