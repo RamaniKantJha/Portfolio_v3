@@ -1,17 +1,15 @@
 // Personal information and data for the portfolio
 export const personalDetails = {
   name: 'Ramani Kant Jha',
-  designation: ['Full-Stack Developer', 'AI & ML Engineer'],
+  designation: ['Data Analyst', 'Python & SQL', 'Machine Learning'],
   email: 'kantramani01@gmail.com',
   phone: '+91 7840030847',
   location: 'Delhi, India',
-  aboutMe: `Computer Science graduate with hands-on experience supporting enterprise applications, technology-driven business operations, and web-based software. Experienced in application troubleshooting, system and operational issue resolution, customer support, data management, REST APIs, SQL, Python, FastAPI, Flask, MySQL, MongoDB, and Git. Experienced working with Finacle Core Banking Solution and supporting technology-enabled banking processes. Strong analytical and problem-solving skills with a software development background, enabling effective diagnosis and resolution of application and technical issues.`,
+  aboutMe: `Computer Science graduate (B.Tech, 8.89 CGPA) with a Python and SQL background and hands-on data analysis experience through published machine learning research. Skilled in data cleaning and preprocessing, feature selection, statistical analysis, model evaluation, and hyperparameter tuning. Brings a year of experience maintaining customer data accuracy and integrity in a high-volume banking environment using Finacle Core Banking Solution. Currently building Power BI and advanced SQL skills for business intelligence and reporting.`,
   socials: [
-    { label: 'Behance', url: 'https://behance.net/ramanikantjha', handle: '@ramanikantjha' },
-    { label: 'Instagram', url: 'https://instagram.com/ramanikantjha', handle: '@ramanikantjha' },
-    { label: 'Twitter', url: 'https://twitter.com/ramanikantjha', handle: '@ramanikantjha' },
-    { label: 'Dribbble', url: 'https://dribbble.com/ramanikantjha', handle: '@ramanikantjha' },
-    { label: 'GitHub', url: 'https://github.com/ramanikantjha', handle: '@ramanikantjha' },
+    { label: 'LinkedIn', url: 'https://linkedin.com/in/ramani-kant-jha', handle: 'ramani-kant-jha' },
+    { label: 'GitHub', url: 'https://github.com/RamaniKantJha', handle: '@RamaniKantJha' },
+    { label: 'Portfolio', url: 'https://portfolio-v3-topaz-five.vercel.app', handle: 'portfolio-v3-topaz-five.vercel.app' },
   ],
   education: [
     {
@@ -19,24 +17,24 @@ export const personalDetails = {
       institution: 'Delhi Technical Campus',
       period: 'Aug 2019 - Jul 2023',
       location: 'New Delhi, India',
-      details: 'CGPA: 8.89/10. Specialized in software engineering, web technologies, and machine learning applications.'
+      details: 'CGPA: 8.89/10.'
     },
     {
       degree: 'Diploma in Mechanical Engineering',
       institution: 'Pusa Institute of Technology',
       period: 'Jul 2016 - May 2019',
       location: 'New Delhi, India',
-      details: 'Foundation in engineering principles and technical fundamentals.'
+      details: 'Diploma in Mechanical Engineering.'
     }
   ],
   workExperience: [
     {
-      title: 'Apprentice',
+      title: 'Apprentice, Core Banking Operations',
       company: 'Bank of Baroda',
       location: 'Karol Bagh, New Delhi, India',
       period: 'Aug 2025 - Aug 2026',
-      description: 'Technical support and application support professional working with Finacle Core Banking Solution. Managed account operations, transaction processing, and customer data. Resolved application and operational issues, supported KYC verification, and assisted with customer onboarding using digital banking tools. Applied analytical and troubleshooting skills to support efficient resolution of technology-related operational issues.',
-      technologies: ['Finacle Core Banking Solution', 'Digital Banking Systems', 'System Troubleshooting', 'Customer Support', 'Data Management'],
+      description: 'Maintained data accuracy and integrity for Finacle Core Banking Solution records, processing approximately 15–17 KYC verifications and 4–5 account openings per day. Identified and resolved customer-record inconsistencies across account opening, onboarding, and digital banking workflows. Supported approximately 10–15 customers per day with digital banking services and coordinated with branch and technical teams to investigate data and system issues. Developed working knowledge of enterprise data workflows and reporting structures in a regulated banking environment.',
+      technologies: ['Finacle Core Banking Solution', 'Customer Data Management', 'Data Accuracy & Integrity', 'KYC Verification', 'Digital Banking'],
       link: '#'
     },
     {
@@ -44,8 +42,8 @@ export const personalDetails = {
       company: 'CloudStok Technologies Pvt. Ltd.',
       location: 'Noida, India',
       period: 'Feb 2025 - Jul 2025',
-      description: 'Developed and supported AI-powered web applications including an intelligent chatbot, image enhancement application, and image generation system. Built backend APIs using FastAPI and integrated services with frontend interfaces. Worked with Python, OpenCV, PyTorch, and TensorFlow for application development. Tested application functionality and resolved technical issues. Optimized application and model performance for better user experience.',
-      technologies: ['Python', 'FastAPI', 'PyTorch', 'TensorFlow', 'OpenCV', 'Git', 'REST APIs'],
+      description: 'Built and supported AI-powered web applications including an intelligent website chatbot, image-enhancement application, and image-generation system using Python, PyTorch, TensorFlow, and OpenCV. Developed backend APIs with FastAPI and integrated them with frontend interfaces. Tested functionality, investigated and fixed technical issues, and optimized application and model performance. Collaborated across development, testing, and deployment using Git and SDLC practices.',
+      technologies: ['Python', 'PyTorch', 'TensorFlow', 'OpenCV', 'FastAPI', 'Git', 'REST APIs'],
       link: '#'
     },
     {
@@ -59,74 +57,47 @@ export const personalDetails = {
     }
   ],
   stats: {
-    currentRole: 'Technical Support Professional & Full-Stack Developer',
+    currentRole: 'Data Analyst | Python, SQL & Machine Learning',
     education: 'B.Tech in Computer Science and Engineering (CGPA: 8.89/10)',
-    experience: '2+ years',
-    projectsCompleted: '10+',
+    experience: '1 year in banking operations + internship experience',
+    projectsCompleted: '4 featured',
   },
   projects: [
     {
-      title: 'Personal Portfolio Website',
-      description: 'Designed and developed a responsive personal portfolio website using modern web technologies. Implemented interactive UI components and animations using Framer Motion. Tested and optimized the website for desktop, tablet, and mobile devices.',
-      image: '/assets/Portfolio_light.png',
-      technologies: ['React', 'Next.js', 'Framer Motion', 'Tailwind CSS', 'TypeScript', 'Vercel'],
-      github: 'https://github.com/ramanikantjha/portfolio_v3',
-      live: 'https://ramanikantjha.me',
+      title: 'Heart Disease Prediction Using Machine Learning',
+      description: 'Compared Random Forest, XGBoost, LightGBM, SVM, KNN, and Logistic Regression using the Cleveland Heart Disease dataset. Applied data preprocessing, feature selection, and GridSearchCV hyperparameter tuning. Random Forest achieved 92.07% accuracy and 0.91 AUC. The research was published as a first-author book chapter by Taylor & Francis in 2024.',
+      image: '/assets/heartDisease.png',
+      technologies: ['Python', 'Pandas', 'NumPy', 'Scikit-learn', 'GridSearchCV', 'Random Forest', 'XGBoost', 'LightGBM'],
+      github: 'https://github.com/RamaniKantJha/heart-disease-prediction',
+      live: '#',
       featured: true
     },
     {
       title: 'AI Chatbot',
-      description: 'Developed an AI-powered chatbot capable of processing user queries and providing contextual responses. Built RESTful APIs using FastAPI and integrated the backend with a React-based frontend. Applied troubleshooting techniques to improve the overall user interaction experience.',
+      description: 'Built a chatbot that processes user queries and returns contextual responses. Integrated RESTful APIs built with FastAPI into a React frontend, troubleshot issues, and improved the user interaction experience.',
       image: '/assets/ChatBot.png',
-      technologies: ['Python', 'FastAPI', 'React', 'NLP', 'REST APIs'],
-      github: 'https://github.com/ramanikantjha/ai-chatbot',
+      technologies: ['Python', 'FastAPI', 'React', 'REST APIs'],
+      github: 'https://github.com/RamaniKantJha/ai-chatbot',
       live: '#',
-      featured: true  
+      featured: true
     },
     {
       title: 'Test Report Analyzer',
-      description: 'Web-based application for analyzing uploaded reports developed during an AWS Intelligent Document Processing workshop. Implemented OCR and document-processing techniques to extract information from uploaded documents. Built a Flask-based application for document upload and analysis workflow.',
+      description: 'Built a Flask web application for report uploads and analysis during an AWS Intelligent Document Processing workshop. Used OCR and document-processing techniques to extract information and tested the complete upload-to-analysis workflow.',
       image: '/assets/test-report-app.png',
-      technologies: ['Python', 'Flask', 'AWS IDP', 'OCR', 'Document Processing'],
-      github: 'https://github.com/ramanikantjha/test-report-analyzer',
+      technologies: ['Python', 'Flask', 'AWS Intelligent Document Processing', 'OCR', 'Document Processing'],
+      github: 'https://github.com/RamaniKantJha/test-report-analyzer',
       live: '#',
       featured: true
     },
     {
-      title: 'Heart Disease Prediction Model',
-      description: 'Developed a machine learning application using the Cleveland Heart Disease dataset. Performed data preprocessing, feature selection, and hyperparameter tuning using GridSearchCV. Evaluated multiple algorithms and achieved 92.07% accuracy using Random Forest with an AUC score of 0.91. Published research on this project in Taylor & Francis, 2024.',
-      image: '/assets/heartDisease.png',
-      technologies: ['Python', 'Scikit-learn', 'Pandas', 'NumPy', 'Matplotlib', 'GridSearchCV', 'Random Forest', 'XGBoost'],
-      github: 'https://github.com/ramanikantjha/heart-disease-prediction',
-      live: '#',
+      title: 'Personal Portfolio Website',
+      description: 'Designed and developed a responsive portfolio website with interactive components and animations. Tested and optimized the site for desktop, tablet, and mobile devices, then deployed it on Vercel.',
+      image: '/assets/Portfolio_light.png',
+      technologies: ['Framer Motion', 'Responsive Web Design', 'Vercel'],
+      github: 'https://github.com/RamaniKantJha/portfolio_v3',
+      live: 'https://portfolio-v3-topaz-five.vercel.app',
       featured: true
-    },
-    {
-      title: 'Image Enhancer',
-      description: 'Advanced image enhancement tool leveraging deep learning techniques to improve image quality, resolution, and clarity. The tool supports denoising, super-resolution, and color correction, making it suitable for both professional and personal use.',
-      image: '/assets/ImageEnhancer.png',
-      technologies: ['Python', 'OpenCV', 'TensorFlow', 'Keras', 'NumPy', 'Deep Learning'],
-      github: 'https://github.com/ramanikantjha/image-enhancer',
-      live: '#',
-      featured: false
-    },
-    {
-      title: 'Ghibli Cartoonifier',
-      description: 'Converts real images into Ghibli-style art using AnimeGANv2 and a FastAPI backend. Demonstrates the integration of advanced AI models with web application architecture for creative image transformation.',
-      image: '/assets/Ghibli.png',
-      technologies: ['PyTorch', 'FastAPI', 'React', 'AnimeGAN', 'Computer Vision'],
-      github: 'https://github.com/ramanikantjha/ghibli-cartoonifier',
-      live: '#',
-      featured: false
-    },
-    {
-      title: 'Generating Art with AI for Low-End Devices',
-      description: 'AI-based art generation tool optimized for low-end devices, providing users with the ability to generate exact or approximate images based on their input. Focuses on performance optimization and resource efficiency.',
-      image: '/assets/AI Art Generation.png',
-      technologies: ['Python', 'TensorFlow', 'Keras', 'OpenCV', 'Tkinter', 'Model Optimization'],
-      github: 'https://github.com/ramanikantjha/ai-art-generation',
-      live: '#',
-      featured: false
     },
   ],
-}; 
+};
