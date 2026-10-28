@@ -82,10 +82,10 @@ const Hero = ({ startTyping = false }: HeroProps) => {
                 />
               ) : (
                 personalDetails.designation.join(' ').split(' ').map((word, i) =>
-                  word === '&' ? (
-                    <span key={i} className="hero-accent text-mint font-accent">&</span>
-                  ) : word === 'Intern' ? (
-                    <span key={i} className="hero-accent text-mint font-accent">Intern</span>
+                  word === 'Analyst' ? (
+                    <span key={i} className="hero-accent text-mint font-accent">Analyst</span>
+                  ) : word === 'Analyst' ? (
+                    <span key={i} className="hero-accent text-mint font-accent">Analyst</span>
                   ) : (
                     (i === 0 ? '' : ' ') + word
                   )
