@@ -90,7 +90,7 @@ const TypingAnimation = ({ text, speed = 100, delay = 0, className = '', isHero 
   // For hero section, render with special styling
   if (isHero) {
     // Highlight substrings: 'end', 'and', '&', '-', 'intern' (case-insensitive, anywhere in word)
-    const highlightRegex = /(end|and|&|-|Game|stack|intern)/gi;
+    const highlightRegex = /(end|and|&|-|Game|stack|Analyst|intern)/gi;
     // Split displayText into array of matches and non-matches
     const parts = [];
     let lastIndex = 0;
@@ -109,7 +109,7 @@ const TypingAnimation = ({ text, speed = 100, delay = 0, className = '', isHero 
       <span className={className} style={{ display: 'inline' }}>
         {parts.map((part, i) => {
           // If the highlighted part is a whole word '&' or 'intern', render on a new line
-          if (part.highlight && (/^(&|intern)$/i.test(part.text.trim()))) {
+          if (part.highlight && (/^(&|intern|Analyst)$/i.test(part.text.trim()))) {
             return (
               <div key={i} style={{ width: '100%' }}>
                 <span className="hero-accent text-mint font-accent">{part.text}</span>
