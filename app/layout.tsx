@@ -3,13 +3,13 @@ import './globals.css'
 import Header from '@/components/Header'
 
 export const metadata: Metadata = {
-  title: 'Ramani Kant Jha - AI/ML Intern & Developer',
+  title: 'Ramani Kant Jha - Data Analyst',
   description: 'Portfolio of Ramani Kant Jha: AI/ML Intern, Full-stack Developer, and Data Science Enthusiast. Specialized in React, Python, and Machine Learning.',
-  keywords: ['AI/ML Intern', 'Full-stack Developer', 'React', 'Python', 'Machine Learning', 'Portfolio'],
+  keywords: ['Data Analyst', 'AI/ML Intern', 'Full-stack Developer', 'React', 'Python', 'Machine Learning', 'Portfolio'],
   authors: [{ name: 'Ramani Kant Jha' }],
   creator: 'Ramani Kant Jha',
   openGraph: {
-    title: 'Ramani Kant Jha - AI/ML Intern & Developer',
+    title: 'Ramani Kant Jha - Data Analyst',
     description: 'Portfolio of Ramani Kant Jha: AI/ML Intern, Full-stack Developer, and Data Science Enthusiast.',
     url: 'https://ramanikantjha.me',
     siteName: 'Ramani Kant Jha Portfolio',
@@ -17,8 +17,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Ramani Kant Jha - AI/ML Intern & Developer',
-    description: 'Portfolio of Ramani Kant Jha: AI/ML Intern, Full-stack Developer, and Data Science Enthusiast.',
+    title: 'Ramani Kant Jha - Data Analyst',
+    description: 'Portfolio of Ramani Kant Jha: Data Analyst, AI/ML Intern, Full-stack Developer, and Data Science Enthusiast.',
   },
 }
 
